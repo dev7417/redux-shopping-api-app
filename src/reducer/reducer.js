@@ -1,15 +1,12 @@
 const initialState = {
-    allData:{
-        id: 1,
-        name: "Dev",
-        category:"2644"
-    }
+    allData:[]
 }
-const siteData = (state=initialState, action) =>{
-    switch(action.type){
+const siteData = (state=initialState,  {type, payLoad}) =>{
+    switch(type){
         case "set_PRODUCT_DATA":
+          
             return{
-             ...state,
+             ...state, allData:payLoad
             }
             default: return state
         }

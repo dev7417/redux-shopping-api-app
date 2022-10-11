@@ -1,8 +1,6 @@
-export const setProductData = () =>{
+export const setProductData = (products) =>{
     return {
         type: "set_PRODUCT_DATA",
-        payLoad: {
-            
-        }
+        payLoad: products
     }
 }
