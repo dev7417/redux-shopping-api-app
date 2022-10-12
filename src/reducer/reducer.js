@@ -8,7 +8,13 @@ const siteData = (state=initialState,  {type, payLoad}) =>{
             return{
              ...state, allData:payLoad
             }
-            default: return state
+            // default: return state
+        
+        case "SECOND_PRODUCT_DATA":
+        return {
+            ...state, allData:payLoad
         }
+        default: return state
+    }
     }
     export default siteData;

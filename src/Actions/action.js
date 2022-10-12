@@ -4,3 +4,10 @@ export const setProductData = (products) =>{
         payLoad: products
     }
 }
+
+export const secondProductData = (secondProducts) =>{
+    return {
+        type: "SECOND_PRODUCT_DATA",
+        payLoad:[secondProducts]
+    }
+}
