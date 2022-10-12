@@ -10,7 +10,7 @@ import './product.css'
 export default function Product() {
   const dispatch = useDispatch();
   const myData = useSelector((state) => state.siteData.allData)
-  console.log(myData)
+  // console.log(myData)
   // const {id, name,category} = myData;
   const fetchApiData = async () => {
     const response = await axios.get("https://fakestoreapi.com/products").catch((err) => {
@@ -41,10 +41,10 @@ export default function Product() {
               <div className='col-lg-3 col-md-4 my-4' key={id} >
                 <NavLink to={`/cart/${id}`}>
                   <div className="card" style={{ width: '18rem' }}>
-                    <img src={item.image} className="card-img-top card-img img-fluid" alt="..." />
+                    <img src={item.image} className="card-img-top card-img img-fluid" alt={item.title} />
                     <div className="card-body">
-                      <h5 className="card-title">{item.title}</h5>
-                      <p className="card-text">{cartDescription.length >= 90 ? `${cartDescription}...` : cartDescription}</p>
+                      <h5 className="card-title text-dark" style={{textDecoration:'none'}}>{item.title}</h5>
+                      <p className="card-text text-white">{cartDescription.length >= 90 ? `${cartDescription}...` : cartDescription}</p>
                       {/* <a href={`/${id}`} className="btn btn-primary">Go somewhere</a> */}
                     </div>
                   </div>

@@ -9,7 +9,9 @@ function App() {
    <BrowserRouter>
     <Routes>
       <Route path='/cart/:id' element={<Datacard />}/>
-      <Route exact path='/' element={<Product />}>
+      <Route  path='/products' element={<Product />}/>
+      <Route  path='/' element={<Product />}>
+
       </Route>
     </Routes>
    </BrowserRouter>

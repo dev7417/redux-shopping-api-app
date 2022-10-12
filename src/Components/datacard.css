@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container .card-data{
+    margin-top: 150px;
+}
+.main-container .card-data .img{
+    height: 250px;
+}
+.main-container .card-data .Link{
+    background-color: red;
+    transition: 0.5s linear all;
+    
+}
+.main-container .card-data .Link:hover{
+   
+
+}
